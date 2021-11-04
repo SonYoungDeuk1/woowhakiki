@@ -197,8 +197,8 @@ header{
             if(document.getElementById("face-image").getAttribute("src") != "#"){
                 alert("잠시만 기다려주세요.")
 				document.getElementById("ai_image").src="Spin-1s-200px.gif"
-                const modelURL = "woowhakiki/model.json";
-                const metadataURL = "woowhakiki/metadata.json";
+                const modelURL = "model.json";
+                const metadataURL = "metadata.json";
                 // load the model and metadata
                 // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
                 // or files from your local hard drive
@@ -251,7 +251,7 @@ header{
 			// 		document.getElementById("init").style.visibility="visible";
 			// 	}
 			// }, 100)
-            location.href= "woowhakiki/" + maxname + ".html"
+            location.href= maxname+".html"
         }
 		function shopopen(){
 			var link = 'https://ooakiki.com/shop';
