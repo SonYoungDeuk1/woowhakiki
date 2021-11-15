@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>//retriever
+
+function ac_1(){
+    //리본
+    document.getElementById("ac1").style.transform="translate(-50%,-50%);"
+    //중앙 맞춤
+    document.getElementById("ac1").style.width = "250px"
+    //크기조절
+    document.getElementById("ac1").src = "logo&ac/ac01.png";
+    //확정
+}function ac_2(){
+    //머리핀
+    document.getElementById("ac1").style.transform="translate(-50%,-50%);"
+    document.getElementById("ac1").style.width = "180px"
+    document.getElementById("ac1").src = "logo&ac/ac02.png";
+}function ac_3(){
+    //쑥스러움
+    document.getElementById("ac3").style.transform="translate(-50%,-50%);"
+    document.getElementById("ac3").style.width = "350px"
+    document.getElementById("ac3").src = "logo&ac/ac04.png";
+}function ac_4(){
+    //부끄러움
+    document.getElementById("ac3").style.transform="translate(-50%,-50%);"
+    document.getElementById("ac3").style.width = "350px"
+    document.getElementById("ac3").src = "logo&ac/ac03.png";
+}function ac_5(){
+    //방울
+    document.getElementById("ac2").style.transform="translate(-50%,-50%);"
+    document.getElementById("ac2").style.width = "325px";
+    document.getElementById("ac2").src = "logo&ac/ac05.png";
+}function ac_6(){
+    //초기화
+    document.getElementById("ac1").src = "";
+    //리본/머리핀 초기화
+    document.getElementById("ac2").src = "";
+    //방울 초기화
+    document.getElementById("ac3").src = "";
+    //쑥스러움/부끄러움 초기화
+}
+
+</script>
+<style>
+    body{
+        text-align: center;
+        align-content: center;
+    }
+    #ac_tbody tr{
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+    }
+    #ac_tbody tr td{
+        background-color: #ffffff;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 20px;
+        width: 120px;
+        height: 90px;
+        cursor: pointer;
+    }
+    #ac_table{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 300px;
+        margin-bottom: 50px;
+    }
+    #ac_tbody{
+        display: inline;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 120px;
+        padding-top: 100px;
+        background-color: #F5F5F5;
+        display: inline;
+        outline: #E6E6E6;
+    }
+    input{cursor: pointer;}
+    #t_table+#contents{
+        display: block;
+        width: 900px;
+    }
+    #contents{
+        float: left;
+    }
+    #ai_image_div {
+        margin-top: 25px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        float: right;
+        width: 700px;
+        height: 700px;
+        border: 2px solid #D43B53;
+        border-radius: 400px;
+        position: relative;
+    }
+    #ai_image_indiv{
+        background-color: #F4F8F9;
+        border-radius: 350px;
+        width: 600px;
+        height: 600px;
+        margin-top: 45px;
+        margin-left: 45px;
+        border: 1px solid#C6C6C6;
+    }
+    #image{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 575px; 
+        position: absolute;
+        transform: translate(-50%,+80px);
+        z-index: 3;
+    }
+    .send{
+        float: right;
+        display: inline;
+        margin-right: 300px;
+        margin-top: 10px;
+        width: 100px;
+        color: #fff;
+        background: #cd4535;
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        border-bottom: 4px solid #b02818;
+        transition: all 0.2s ease;
+        border: 1px solid#C6C6C6;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .back1{
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+        width: 100px;
+        color: #fff;
+        background: #707070;
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        border-bottom: 4px solid #424242;
+        transition: all 0.2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    header{
+        background-color: #F4F4F4;
+        height: 85px;
+        margin: auto 0px;
+        text-align: center;
+        align-content: center;
+    }
+    #teb{
+        float: right;
+        font-weight: 900;
+        margin-right: 100px;
+        margin-top: 33px;
+        display: inline;
+        color: #757575;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+    footer{
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        visibility: hidden;
+    }
+    #f_table{
+        margin-top: 200px;
+    }
+
+    #f_td1, #f_td3{
+        background-color: #F5F5F5;
+        height: 100px;
+        width: 25%;
+    }
+    #f_td2, #f_td4{
+        background-color: #EDEDED;
+        height: 100px;
+        width: 25%;
+    }
+    #in_name+#in_tr+#input{display: block;}
+    #in_name{
+        display: inline;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 25px;
+        padding-right: 20px;
+        top: 2px;
+        background-color: #D43B53;
+        font-weight: 700;
+        font-size: 17px;
+        color: #ffffff;
+    }
+    #in_tr{
+        display: inline;
+        height: 42px;
+        margin-top: -12px;
+        background-color: #FCFCFC;
+        border: 1px solid#C6C6C6;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        width: 430px;
+        z-index: 20;
+        position: absolute;
+    }
+    #input{
+        display: inline;
+        left: 1px;
+        margin-top: -1px;
+        width: 400px;
+        height: 42px;
+        padding-left: 10px;
+        border-style: none;
+        position: absolute;
+        z-index: 30;
+        font-size: 17px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #text{
+        top: -150px;
+        margin-left: -300px;
+        position: relative;
+    }
+    #save{width: 100%;height: 100%;}
+</style>
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script> -->
+<script type="text/javascript">
+//결정버튼 : 다운로드하는 클릭이벤트
+  $(function(){
+  $("#save").click(function() {
+      save_b();
+    //   this
+      html2canvas($(".ai_image_indiv"), {
+          onrendered: function(canvas) {
+              canvas.toBlob(function(blob) {
+                  var name = document.getElementById('input').value;
+                  saveAs(blob, name+'.png');
+              });
+          }
+      });
+      save_a();
+  });
+  });
+
+  function save_b(){
+    document.getElementById("ai_image_indiv").style.backgroundColor="rgba(0, 0, 0, 0.0)";
+    document.getElementById("ai_image_indiv").style.border="0px solid#C6C6C6";
+    // document.getElementById("image").style.transform="translate(-50%,-25%)";
+    console.log("window.innerHeight : "+window.innerHeight);
+    // if(window.innerHeight<720){
+    //     console.log("실행");
+    //     // parent.resizeTo(window.innerWidth, 720);
+    //     console.log("window.innerHeight : "+window.innerHeight);
+    // }
+    // if(window.innerWidth<895){
+    //     // window.resizeTo(895, window.innerHeight);
+    // }
+    // document.getElementById("ai_image_indiv").style.marginLeft="40px";
+
+    // document.getElementById("image").style.marginLeft="-1px";
+    document.getElementById("ac1").style.marginTop="-3px";
+    document.getElementById("ac2").style.marginTop="-3px";
+    document.getElementById("ac3").style.marginTop="-3px";
+    document.getElementById("ac1").style.marginLeft="-3px";
+    document.getElementById("ac2").style.marginLeft="-3px";
+    document.getElementById("ac3").style.marginLeft="-3px";
+        // window.innerHeight=700;
+        // $('selector').css('height',$(window).height(700));
+  }
+  function save_a(){
+    document.getElementById("ai_image_indiv").style.backgroundColor="#F4F8F9";
+    document.getElementById("ai_image_indiv").style.border="1px solid#C6C6C6";
+    // document.getElementById("image").style.transform="translate(-50%,+25%)";
+
+    // document.getElementById("ai_image_indiv").style.marginLeft="45px";
+
+    // document.getElementById("image").style.marginLeft="0px";
+    document.getElementById("ac1").style.marginTop="0px";
+    document.getElementById("ac2").style.marginTop="0px";
+    document.getElementById("ac3").style.marginTop="0px";
+    document.getElementById("ac1").style.marginLeft="0px";
+    document.getElementById("ac2").style.marginLeft="0px";
+    document.getElementById("ac3").style.marginLeft="0px";
+  }
+
+//   function dog_click(){
+//     save_b();
+//     html2canvas(document.querySelector('#contents'), {}).then(function (canvas) {
+//         var name = document.getElementById('input').value;
+//         saveAs(canvas.toDataURL(), name+'.png');
+//     });    
+// }
+
+// function saveAs(uri, filename) {
+// 	var link = document.createElement('a');
+// 	if (typeof link.download === 'string') {
+// 		link.href = uri;
+// 		link.download = filename;
+// 		document.body.appendChild(link);
+// 		link.click();
+// 		document.body.removeChild(link);
+// 	} else {
+// 		window.open(uri);
+// 	}
+//     save_a();
+// }
+
+var mx1, my1;
+var on1=0;
+// 리본 / 머리핀
+//클릭시
+function move_onoff_ac1(e){
+    if (on1==0){
+	var pop=document.getElementById("ac1");
+	mx1=e.clientX-pop.offsetLeft;
+	my1=e.clientY-pop.offsetTop;
+	++on1;
+    document.getElementById("ac1").style.zIndex="4";
+    }else
+        --on1;
+}
+//마우스가 움직일때
+function move_ac1(e){
+    if(on1==0)
+        return;
+    var pop=document.getElementById("ac1");
+    var x=e.clientX-mx1;
+    var y=e.clientY-my1;
+    if(x>0)
+        pop.style.left=x+"px";
+    if(y>0)
+        pop.style.top=y+"px";
+    document.getElementById("ac1").style.zIndex="100";
+}
+
+var mx2, my2;
+var on2=0;
+function move_onoff_ac2(e){
+    if (on2==0){
+        var pop=document.getElementById("ac2");
+        mx2=e.clientX-pop.offsetLeft;
+        my2=e.clientY-pop.offsetTop;
+        ++on2;
+        document.getElementById("ac2").style.zIndex="100";
+    }else{
+        --on2;
+        document.getElementById("ac2").style.zIndex="2";
+}}
+// 방울
+function move_ac2(e){
+	if(on2==0)
+		return;
+	var pop=document.getElementById("ac2");
+	var x=e.clientX-mx2;
+	var y=e.clientY-my2;
+	if(x>0)
+		pop.style.left=x+"px";
+	if(y>0)
+		pop.style.top=y+"px";
+    document.getElementById("ac2").style.zIndex="100";
+}
+// 쑥스러움 / 부끄러움
+var mx3, my3;
+var on3=0;
+function move_onoff_ac3(e){
+    if(on3==0){
+        var pop=document.getElementById("ac3");
+        mx3=e.clientX-pop.offsetLeft;
+        my3=e.clientY-pop.offsetTop;
+        ++on3;
+        document.getElementById("ac3").style.zIndex="5";
+    }else{
+        --on3;
+}}
+
+function move_ac3(e){
+	if(on3==0)
+		return;
+	var pop=document.getElementById("ac3");
+	var x=e.clientX-mx3;
+	var y=e.clientY-my3;
+	if(x>0)
+		pop.style.left=x+"px";
+	if(y>0)
+		pop.style.top=y+"px";
+    document.getElementById("ac3").style.zIndex="100";
+}
+function shopopen(){
+			var link = 'https://ooakiki.com/shop';
+			window.open(link);
+		}
+
+        $(window).resize(function(){
+            footer_width();
+        });
+        $(window).load(function(){
+            footer_width();
+        })
+        function footer_width(){
+            var window_width = document.body.clientWidth;
+            document.getElementById("f_td1").style.width = window_width / 4 + "px";
+            document.getElementById("f_td2").style.width = window_width / 4 + "px";
+            document.getElementById("f_td3").style.width = window_width / 4 + "px";
+            document.getElementById("f_td4").style.width = window_width / 4 + "px";
+            window.resize="both";
+            parent.resizeTo(1920, 1080);
+            // if(window.innerHeight<720){
+            //     // window.resizeTo(window.screen.availWidth, 700);
+            //     // window.open("", "dog", "").resizeTo(window.innerWidth, 720);
+            //     parent.resizeTo(window.innerWidth, 720);
+            // }
+            // if(window.innerWidth<895){
+            //     parent.resizeTo(895, window.screen.availHeight);
+            //     // window.open("", "dog", "").resizeTo(900, window.innerHeight);
+            // }
+        }
+        function fotopen(){
+            //푸터 오픈
+            setTimeout(function(){document.getElementById('fot').style.visibility="visible";},210);
+            
+            //일러스트 중앙
+            //document.getElementById('contents').style.float="none";
+            //document.getElementById('ai_image_div').style.marginLeft="auto";
+            //document.getElementById('ai_image_div').style.marginRight="auto";
+
+            //콘텐츠 테이블 하이드
+            setTimeout(function(){document.getElementById('ac_table').style.visibility="hidden"}, 210);
+            document.getElementById('next_btn1').style.visibility="hidden"
+            document.getElementById('next_btn2').style.visibility="hidden"
+        }
+        function divopen(){
+            //푸터 하이드
+            document.getElementById('fot').style.visibility="hidden";
+            //일러스트 원래위치로
+            //document.getElementById('contents').style.visibility="hidden"
+            //document.getElementById('contents').style.float= "right";
+            //document.getElementById('ai_image_div').style.marginleft="400px";
+            //콘텐츠 보임
+            document.getElementById('ac_table').style.visibility="visible"
+            document.getElementById('next_btn1').style.visibility="visible"
+            document.getElementById('next_btn2').style.visibility="visible"
+        }
+</script>
+</head>
+<header>
+    <img src="logo&ac/logo01.png" width="170px" style="margin-top: 43px;position: absolute;transform: translate(-50%, -50%);cursor: pointer;" onclick="location.href='index.html'"> <div id="teb" onclick="shopopen()">SHOP</div>
+</header>
+<body>
+    <div id="contents">
+        <div class="ai_image_div" id="ai_image_div"><div class="ai_image_indiv" id="ai_image_indiv"><img src="dog(new)/poodle.png" id="image">
+        <img src=""id="ac1" style="position: absolute; z-index: 4;" onclick="move_onoff_ac1(event);" onmousemove="move_ac1(event);">
+        <img src=""id="ac3" style="position: absolute; z-index: 5;" onclick="move_onoff_ac3(event);" onmousemove="move_ac3(event);">
+        <img src="" id="ac2" style="position: absolute; z-index: 2;" onclick="move_onoff_ac2(event);" onmousemove="move_ac2(event);"></div></div>
+    </div>
+    <table id="ac_table"><tbody id="ac_tbody"><tr id="ac_tr1">
+            <td onclick="ac_1()" id="new_ac1"><img src="logo&ac/ac01.png" style="width: 70px;"></td><td onclick="ac_2()"  id="new_ac2"><img src="logo&ac/ac02.png" style="width: 70px;"></td><td onclick="ac_5()"  id="new_ac3"><img src="logo&ac/ac05.png" style="width: 70px;"></td>
+        </tr><tr id="ac_tr2">
+            <td onclick="ac_4()"  id="new_ac4"><img src="logo&ac/ac03.png" style="width: 70px;"></td><td onclick="ac_3()"  id="new_ac5"><img src="logo&ac/ac04.png" style="width: 70px;"></td><td onclick="ac_6()" style="background-color: gray;font-weight: 600; color: #ffffff;">초기화</td>
+        </tr>
+    </tbody>
+    </table>
+        <button type="button" class="send" onclick="fotopen()" id="next_btn1">완료</button>
+        <button type="button" class="back1" onclick="location.href='index.html'" id="next_btn2">돌아가기</button>
+        <footer id="fot">
+            <!-- style="visibility: hidden;" -->
+            <div id="text"><div id="in_name">이름</div><div id="in_tr"><input type="text" id="input" value="ex. kiki"></div></div>
+        <table id="f_table">
+            <tbody id="f_tbody">
+                <tr id="f_tr">
+                    <td id="f_td1" style="cursor: pointer;" >
+                        <div id="save"><img src="icon/save@2x.png" width="25px" style="margin-top: 50px;transform: translate(0,-50%);"></div>
+                    </td>
+                    <td id="f_td2" style="cursor: pointer;" onclick="divopen()">
+                        <img src="icon/back@2x.png" width="25px" >
+                    </td>
+                    <td id="f_td3" style="cursor: pointer;" onclick="">
+                        <img src="icon/shop@2x.png" width="25px" >
+                    </td>
+                    <td id="f_td4" style="cursor: pointer;" onclick="">
+                        <img src="icon/msg@2x.png" width="25px" >
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </footer>
+</body>
+
+
+</html>
