@@ -7,34 +7,32 @@ function ac_1(){
     //리본
     document.getElementById("ac1").style.transform="translate(-50%,-50%);"
     //중앙 맞춤
-    document.getElementById("ac1").style.width = "100px"
+    document.getElementById("ac1").style.width = "250px"
     //크기조절
-    document.getElementById("ac1").src = "ac1/1.png";
+    document.getElementById("ac1").src = "logo&ac/ac01.png";
     //확정
 }function ac_2(){
     //머리핀
     document.getElementById("ac1").style.transform="translate(-50%,-50%);"
-    document.getElementById("ac1").style.width = "80px"
-    document.getElementById("ac1").src = "ac1/2.png";
+    document.getElementById("ac1").style.width = "180px"
+    document.getElementById("ac1").src = "logo&ac/ac02.png";
 }function ac_3(){
     //쑥스러움
     document.getElementById("ac3").style.transform="translate(-50%,-50%);"
-    document.getElementById("ac3").style.width = "170px"
-    document.getElementById("ac3").src = "ac1/4.png";
+    document.getElementById("ac3").style.width = "350px"
+    document.getElementById("ac3").src = "logo&ac/ac04.png";
 }function ac_4(){
     //부끄러움
     document.getElementById("ac3").style.transform="translate(-50%,-50%);"
-    document.getElementById("ac3").style.width = "140px"
-    document.getElementById("ac3").src = "ac1/3.png";
+    document.getElementById("ac3").style.width = "350px"
+    document.getElementById("ac3").src = "logo&ac/ac03.png";
 }function ac_5(){
     //방울
     document.getElementById("ac2").style.transform="translate(-50%,-50%);"
-    document.getElementById("ac2").style.width = "130px";
-    document.getElementById("ac2").src = "ac1/5.png";
+    document.getElementById("ac2").style.width = "325px";
+    document.getElementById("ac2").src = "logo&ac/ac05.png";
 }function ac_6(){
     //초기화
-    document.getElementById("image").src = "dog(new)/Pomeranian.png";
-    //강아지사진 초기화
     document.getElementById("ac1").src = "";
     //리본/머리핀 초기화
     document.getElementById("ac2").src = "";
@@ -68,7 +66,7 @@ function ac_1(){
     #ac_table{
         margin-right: auto;
         margin-left: auto;
-        margin-top: 185px;
+        margin-top: 300px;
         margin-bottom: 50px;
     }
     #ac_tbody{
@@ -90,37 +88,38 @@ function ac_1(){
     #contents{
         float: left;
     }
-    .ai_image_div {
-        margin-top: 120px;
-        margin-left: 400px;
+    #ai_image_div {
+        margin-top: 25px;
+        margin-left: 150px;
         margin-bottom: 20px;
         float: right;
-        width: 350px;
-        height: 350px;
+        width: 700px;
+        height: 700px;
         border: 2px solid #D43B53;
-        border-radius: 175px;
+        border-radius: 400px;
         position: relative;
     }
-    .ai_image_indiv{
+    #ai_image_indiv{
         background-color: #F4F8F9;
-        border-radius: 160px;
-        width: 320px;
-        height: 320px;
-        margin-top: 15px;
-        margin-left: 15px;
+        border-radius: 350px;
+        width: 600px;
+        height: 600px;
+        margin-top: 45px;
+        margin-left: 45px;
         border: 1px solid#C6C6C6;
     }
     #image{
-        margin-top: 55px;
-        width: 250px; 
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 575px; 
         position: absolute;
-        transform: translate(-50%);
+        transform: translate(-50%,+80px);
         z-index: 3;
     }
     .send{
         float: right;
         display: inline;
-        margin-right: 220px;
+        margin-right: 300px;
         margin-top: 10px;
         width: 100px;
         color: #fff;
@@ -153,11 +152,11 @@ function ac_1(){
         cursor: pointer;
     }
     header{
-	background-color: #F4F4F4;
-	height: 85px;
-	margin: auto 0px;
-	text-align: center;
-	align-content: center;
+        background-color: #F4F4F4;
+        height: 85px;
+        margin: auto 0px;
+        text-align: center;
+        align-content: center;
     }
     #teb{
         float: right;
@@ -176,7 +175,7 @@ function ac_1(){
         visibility: hidden;
     }
     #f_table{
-        margin-top: 130px;
+        margin-top: 200px;
     }
 
     #f_td1, #f_td3{
@@ -206,7 +205,7 @@ function ac_1(){
     }
     #in_tr{
         display: inline;
-        height: 45px;
+        height: 42px;
         margin-top: -12px;
         background-color: #FCFCFC;
         border: 1px solid#C6C6C6;
@@ -221,7 +220,7 @@ function ac_1(){
         left: 1px;
         margin-top: -1px;
         width: 400px;
-        height: 45px;
+        height: 42px;
         padding-left: 10px;
         border-style: none;
         position: absolute;
@@ -239,11 +238,16 @@ function ac_1(){
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script> -->
 <script type="text/javascript">
 //결정버튼 : 다운로드하는 클릭이벤트
   $(function(){
   $("#save").click(function() {
-      //save_b();
+      save_b();
+    //   this
       html2canvas($(".ai_image_indiv"), {
           onrendered: function(canvas) {
               canvas.toBlob(function(blob) {
@@ -252,18 +256,50 @@ function ac_1(){
               });
           }
       });
-      //save_a();
+      save_a();
   });
   });
 
-//   function save_b(){
-//     document.getElementById("ai_image_div").style.marginTop="0px";
-//     document.getElementById("ai_image_div").style.marginLeft="0px";
-//   }
-//   function save_a(){
-//     document.getElementById("ai_image_div").style.marginTop="120px";
-//     document.getElementById("ai_image_div").style.marginLeft="400px";
-//   }
+  function save_b(){
+    document.getElementById("ai_image_indiv").style.backgroundColor="rgba(0, 0, 0, 0.0)";
+    document.getElementById("ai_image_indiv").style.border="0px solid#C6C6C6";
+    // document.getElementById("image").style.transform="translate(-50%,-25%)";
+    console.log("window.innerHeight : "+window.innerHeight);
+    // if(window.innerHeight<720){
+    //     console.log("실행");
+    //     // parent.resizeTo(window.innerWidth, 720);
+    //     console.log("window.innerHeight : "+window.innerHeight);
+    // }
+    // if(window.innerWidth<895){
+    //     // window.resizeTo(895, window.innerHeight);
+    // }
+    // document.getElementById("ai_image_indiv").style.marginLeft="40px";
+
+    // document.getElementById("image").style.marginLeft="-1px";
+    document.getElementById("ac1").style.marginTop="-3px";
+    document.getElementById("ac2").style.marginTop="-3px";
+    document.getElementById("ac3").style.marginTop="-3px";
+    document.getElementById("ac1").style.marginLeft="-3px";
+    document.getElementById("ac2").style.marginLeft="-3px";
+    document.getElementById("ac3").style.marginLeft="-3px";
+        // window.innerHeight=700;
+        // $('selector').css('height',$(window).height(700));
+  }
+  function save_a(){
+    document.getElementById("ai_image_indiv").style.backgroundColor="#F4F8F9";
+    document.getElementById("ai_image_indiv").style.border="1px solid#C6C6C6";
+    // document.getElementById("image").style.transform="translate(-50%,+25%)";
+
+    // document.getElementById("ai_image_indiv").style.marginLeft="45px";
+
+    // document.getElementById("image").style.marginLeft="0px";
+    document.getElementById("ac1").style.marginTop="0px";
+    document.getElementById("ac2").style.marginTop="0px";
+    document.getElementById("ac3").style.marginTop="0px";
+    document.getElementById("ac1").style.marginLeft="0px";
+    document.getElementById("ac2").style.marginLeft="0px";
+    document.getElementById("ac3").style.marginLeft="0px";
+  }
 
 //   function dog_click(){
 //     save_b();
@@ -378,12 +414,23 @@ function shopopen(){
         $(window).load(function(){
             footer_width();
         })
-        function footer_width(w_width){
+        function footer_width(){
             var window_width = document.body.clientWidth;
             document.getElementById("f_td1").style.width = window_width / 4 + "px";
             document.getElementById("f_td2").style.width = window_width / 4 + "px";
             document.getElementById("f_td3").style.width = window_width / 4 + "px";
             document.getElementById("f_td4").style.width = window_width / 4 + "px";
+            window.resize="both";
+            parent.resizeTo(1920, 1080);
+            // if(window.innerHeight<720){
+            //     // window.resizeTo(window.screen.availWidth, 700);
+            //     // window.open("", "dog", "").resizeTo(window.innerWidth, 720);
+            //     parent.resizeTo(window.innerWidth, 720);
+            // }
+            // if(window.innerWidth<895){
+            //     parent.resizeTo(895, window.screen.availHeight);
+            //     // window.open("", "dog", "").resizeTo(900, window.innerHeight);
+            // }
         }
         function fotopen(){
             //푸터 오픈
@@ -414,19 +461,19 @@ function shopopen(){
 </script>
 </head>
 <header>
-    <img src="icon/logo@1x.png" width="170px" style="margin-top: 43px;position: absolute;transform: translate(-50%, -50%);cursor: pointer;" onclick="location.href='index.html'"> <div id="teb" onclick="shopopen()">SHOP</div>
+    <img src="logo&ac/logo01.png" width="170px" style="margin-top: 43px;position: absolute;transform: translate(-50%, -50%);cursor: pointer;" onclick="location.href='index.html'"> <div id="teb" onclick="shopopen()">SHOP</div>
 </header>
 <body>
     <div id="contents">
-        <div class="ai_image_div" id="ai_image_div"><div class="ai_image_indiv"><img src="dog(new)/Pomeranian.png" id="image">
+        <div class="ai_image_div" id="ai_image_div"><div class="ai_image_indiv" id="ai_image_indiv"><img src="dog(new)/Pomeranian.png" id="image">
         <img src=""id="ac1" style="position: absolute; z-index: 4;" onclick="move_onoff_ac1(event);" onmousemove="move_ac1(event);">
         <img src=""id="ac3" style="position: absolute; z-index: 5;" onclick="move_onoff_ac3(event);" onmousemove="move_ac3(event);">
         <img src="" id="ac2" style="position: absolute; z-index: 2;" onclick="move_onoff_ac2(event);" onmousemove="move_ac2(event);"></div></div>
     </div>
     <table id="ac_table"><tbody id="ac_tbody"><tr id="ac_tr1">
-            <td onclick="ac_1()" id="new_ac1"><img src="ac1/1.png" style="width: 70px;"></td><td onclick="ac_2()"  id="new_ac2"><img src="ac1/2.png" style="width: 70px;"></td><td onclick="ac_5()"  id="new_ac3"><img src="ac1/5.png" style="width: 70px;"></td>
+            <td onclick="ac_1()" id="new_ac1"><img src="logo&ac/ac01.png" style="width: 70px;"></td><td onclick="ac_2()"  id="new_ac2"><img src="logo&ac/ac02.png" style="width: 70px;"></td><td onclick="ac_5()"  id="new_ac3"><img src="logo&ac/ac05.png" style="width: 70px;"></td>
         </tr><tr id="ac_tr2">
-            <td onclick="ac_4()"  id="new_ac4"><img src="ac1/3.png" style="width: 70px;"></td><td onclick="ac_3()"  id="new_ac5"><img src="ac1/4.png" style="width: 70px;"></td><td onclick="ac_6()" style="background-color: gray;font-weight: 600; color: #ffffff;">초기화</td>
+            <td onclick="ac_4()"  id="new_ac4"><img src="logo&ac/ac03.png" style="width: 70px;"></td><td onclick="ac_3()"  id="new_ac5"><img src="logo&ac/ac04.png" style="width: 70px;"></td><td onclick="ac_6()" style="background-color: gray;font-weight: 600; color: #ffffff;">초기화</td>
         </tr>
     </tbody>
     </table>

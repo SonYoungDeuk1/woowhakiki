@@ -251,7 +251,13 @@ header{
 			// 		document.getElementById("init").style.visibility="visible";
 			// 	}
 			// }, 100)
-            location.href= maxname+".html"
+            // location.href= maxname+".html";
+			
+			window.open(maxname+".html", "dog", "width=1920, height=1050");
+			// window.opener=self;
+			top.window.close();
+			
+			
         }
 		function shopopen(){
 			var link = 'https://ooakiki.com/shop';
@@ -293,7 +299,7 @@ header{
 
 <body>
 	<header>
-		<img src="icon/logo@1x.png" width="170px" style="margin-top: 43px;position: absolute;transform: translate(-50%, -50%);cursor: pointer;" onclick="location.href='index.html'"> <div id="teb" onclick="shopopen()">SHOP</div>
+		<img src="logo&ac/logo01.png" width="170px" style="margin-top: 43px;position: absolute;transform: translate(-50%, -50%);cursor: pointer;" onclick="location.href='index.html'"> <div id="teb" onclick="shopopen()">SHOP</div>
 	</header>
 	<div class="file-upload">
 		
@@ -305,7 +311,7 @@ header{
 				<b>클릭</b> 하거나 사진 <b>끌어오기</b>
 			</div>
 		</div>
-		<div class="ai_image_div"><div class="ai_image_indiv"><img src="1예시.png" id="ai_image"></div>
+		<div class="ai_image_div"><div class="ai_image_indiv"><img src="ex1.png" id="ai_image"></div>
 		<br><button type="button" onclick="nextindex()" class="next_btn" style="visibility: hidden;" id="init">꾸미기</button></div>
 		
 		<div class="file-upload-content">
