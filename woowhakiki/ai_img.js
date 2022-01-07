@@ -288,7 +288,7 @@ $(function(){
   
   
       //f_body 높이조절
-      document.getElementById("f_table").style.marginTop = window_size/40+ "px";
+      document.getElementById("f_table").style.marginTop = window_size/10+ "px";
   
       //완료버튼 누르면 나오는 4개 버튼
       document.getElementById("f_td1").style.width = window_size / 4 + "px";
