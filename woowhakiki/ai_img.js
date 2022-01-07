@@ -191,7 +191,7 @@ $(function(){
   function reset_style(){
       var window_size = document.body.clientWidth;
       window.resize="both";
-      parent.resizeTo(1920, 1080);
+      parent.resizeTo(1248, 1080);
   
       //shop링크버튼
       document.getElementById("teb").style.marginRight = window_size / 15 + "px";
